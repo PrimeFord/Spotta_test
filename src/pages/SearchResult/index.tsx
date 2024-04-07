@@ -20,7 +20,7 @@ const SearchAddress = () => {
     }
   };
   return (
-    <div className="pt-[20rem] lg:pt-[11rem] pb-2 flex flex-col-reverse lg:flex-row gap-8 lg:gap-[4rem]">
+    <div className="mt-[20rem] pt-4 lg:mt-[11rem] pb-2 flex flex-col-reverse lg:flex-row gap-8 lg:gap-[4rem]">
       <div className="w-[100%] lg:w-[70%] gap-2 flex flex-col">
         {reviews.map((el) => (
           <ReviewCard props={el} />
@@ -87,7 +87,7 @@ const SearchAddress = () => {
               <div
                 className={` ${
                   hide ? "grid" : "hidden"
-                } h-[15rem] lg:h-[10rem] w-fit lg:w-[100%] absolute bg-[#F3F7FE] p-1 grid-cols-3 lg:grid-cols-5 border-[1px] border-solid border-[#D4DCF1] rounded-[8px]`}
+                } h-[15rem] lg:h-[10rem] w-full lg:w-[100%] absolute bg-[#F3F7FE] p-1 grid-cols-3 lg:grid-cols-5 border-[1px] border-solid border-[#D4DCF1] rounded-[8px]`}
               >
                 {reviewTags.map((e, i) => (
                   <label
