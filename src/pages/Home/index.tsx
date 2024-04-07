@@ -9,7 +9,7 @@ const HomePage = () => {
   const { setAddress } = useAddressContext();
   console.log(input);
   return (
-    <div className="w-[100%] h-fit pt-[4rem] lg:pt-0 flex flex-col justify-center lg:flex-row ">
+    <div className="w-[100%] h-fit pt-[8rem] lg:pt-0 flex flex-col justify-center lg:flex-row ">
       <div className="w-[100%] lg:w-[50%] text-[#1e1e1e] flex flex-col justify-center gap-[1.5rem] lg:gap-4">
         <p className="w-[100%] lg:w-[32rem] font-[700] text-[3.5rem] lg:text-[4rem] leading-[4rem] lg:leading-[4.5rem]">
           Find a place you will love to live!
@@ -38,7 +38,7 @@ const HomePage = () => {
                 />
               </span>
               <input
-                className="w-[100%] bg-[#F3F7FE] placeholder:text-[#484851] outline-0 border-0"
+                className="w-[100%] focus:outline-none active:outline-none bg-[#F3F7FE] placeholder:text-[#484851] outline-0 border-0"
                 required
                 type="text"
                 name="search"
@@ -57,9 +57,9 @@ const HomePage = () => {
           </form>
         </div>
       </div>
-      <div className=" lg:w-[50%] h-[100%]  lg:flex justify-center">
+      <div className=" lg:w-[50%] h-[100%] lg:flex justify-center">
         <img
-          className="h-[100%] lg:w-[50%]"
+          className="lg:h-[100%] lg:w-[50%]"
           src="/Image/Herobg.png"
           alt="hero-bg"
         />
