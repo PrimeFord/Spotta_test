@@ -1,7 +1,7 @@
 import { IoMdClose } from "react-icons/io";
 
 interface IModalContainer {
-  children?: any;
+  children: any;
   isVisible: boolean;
   onClose: any;
 }

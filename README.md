@@ -24,6 +24,7 @@ Clone or download this repository and run with a local server of open `localhost
 - Vite
 - Tailwind-CSS
 - TypeScript
+- React-Router
 
 ## Package Manager
 - NPM

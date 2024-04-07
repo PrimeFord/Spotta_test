@@ -12,9 +12,6 @@ import { useModalContext } from "../Context/modal";
 const Navbar = () => {
   const { address } = useAddressContext();
   const { setShow } = useModalContext();
-  // const navigate = useNavigate();
-
-  // const address = localStorage.getItem("addressState");
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   return (

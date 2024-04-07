@@ -14,7 +14,6 @@ const SearchAddress = () => {
   const [hide, setHide] = useState(false);
   const [input, setInput] = useState("");
   const [done, setDone] = useState(false);
-  // const address = localStorage.getItem("addressState");
   const handleHide = (e: any) => {
     if (e.target.id === "drop") {
       setHide(false);
