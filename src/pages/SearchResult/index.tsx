@@ -20,7 +20,7 @@ const SearchAddress = () => {
     }
   };
   return (
-    <div className="pt-[22rem] lg:pt-[11rem] pb-2 flex flex-col-reverse lg:flex-row gap-8 lg:gap-[4rem]">
+    <div className="pt-[22rem] lg:pt-[12rem] pb-2 flex flex-col-reverse lg:flex-row gap-8 lg:gap-[4rem]">
       <div className="w-[100%] lg:w-[70%] gap-2 flex flex-col">
         {reviews.map((el) => (
           <ReviewCard props={el} />

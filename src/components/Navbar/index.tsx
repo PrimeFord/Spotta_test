@@ -68,17 +68,19 @@ const Navbar = () => {
               </div>
               <div className="flex justify-between lg:justify-end flex-grow items-center gap-3">
                 <button
-                  className="bg-[#3366FF] text-[#fff] hover:bg-[#3366FF95] text-[0.8rem] py-3 px-5 rounded-[8px]"
+                  className="bg-[#3366FF] w-[12rem] lg:w-fit text-[#fff] hover:bg-[#3366FF95] text-[0.8rem] py-3 px-5 rounded-[8px]"
                   onClick={() => setShow(true)}
                 >
                   LEAVE A REVIEW
                 </button>
-                <button className="border-[#3366FF] hover:bg-[#5378F620] border-solid border-[1px] p-3 rounded-[8px]">
-                  <GrBookmark style={{ color: "#3366FF" }} />
-                </button>
-                <button className="border-[#3366FF] hover:bg-[#5378F620] border-solid border-[1px] p-3 rounded-[8px]">
-                  <SlShare style={{ color: "#3366FF" }} />
-                </button>
+                <div className="flex gap-3">
+                  <button className="border-[#3366FF] hover:bg-[#5378F620] border-solid border-[1px] p-3 rounded-[8px]">
+                    <GrBookmark style={{ color: "#3366FF" }} />
+                  </button>
+                  <button className="border-[#3366FF] hover:bg-[#5378F620] border-solid border-[1px] p-3 rounded-[8px]">
+                    <SlShare style={{ color: "#3366FF" }} />
+                  </button>
+                </div>
               </div>
             </div>
             <div className="overflow-x-scroll lg:overflow-hidden w-[100%] mt-2 lg:mt-0 gap-3 lg:gap-0 flex justify-between items-center pb-1">

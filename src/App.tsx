@@ -9,6 +9,7 @@ import { MyAddressContext } from "./components/Context/address";
 import { useEffect, useState } from "react";
 import ReviewPage from "./pages/Review";
 import { MyModalContext } from "./components/Context/modal";
+import SplashScreen from "./components/SplashScreen";
 
 function App() {
   const [address, setAddress] = useState(
@@ -24,22 +25,33 @@ function App() {
   useEffect(() => {
     localStorage.setItem("addressState", JSON.stringify(address));
   }, [address]);
-
+  const isHomePage = window.location.pathname === "/";
+  const [isLoading, setIsLoading] = useState(isHomePage);
+  useEffect(() => {
+    if (isLoading) {
+      return;
+    }
+  }, [isLoading]);
+  console.log(window.location.pathname);
   return (
     <>
-      <BrowserRouter>
-        <MyAddressContext.Provider value={{ address, setAddress }}>
-          <MyModalContext.Provider value={{ show, setShow }}>
-            <MainContainer>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/search" element={<SearchAddress />} />
-                <Route path="/review" element={<ReviewPage />} />
-              </Routes>
-            </MainContainer>
-          </MyModalContext.Provider>
-        </MyAddressContext.Provider>
-      </BrowserRouter>
+      {isLoading && isHomePage ? (
+        <SplashScreen finishLoading={() => setIsLoading(false)} />
+      ) : (
+        <BrowserRouter>
+          <MyAddressContext.Provider value={{ address, setAddress }}>
+            <MyModalContext.Provider value={{ show, setShow }}>
+              <MainContainer>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/search" element={<SearchAddress />} />
+                  <Route path="/review" element={<ReviewPage />} />
+                </Routes>
+              </MainContainer>
+            </MyModalContext.Provider>
+          </MyAddressContext.Provider>
+        </BrowserRouter>
+      )}
     </>
   );
 }

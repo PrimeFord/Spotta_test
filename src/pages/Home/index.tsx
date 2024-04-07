@@ -7,7 +7,6 @@ const HomePage = () => {
   const [input, setInput] = useState("");
   const navigate = useNavigate();
   const { setAddress } = useAddressContext();
-  console.log(input);
   return (
     <div className="w-[100%] h-fit pt-[8rem] lg:pt-0 flex flex-col justify-center lg:flex-row ">
       <div className="w-[100%] lg:w-[50%] text-[#1e1e1e] flex flex-col justify-center gap-[1.5rem] lg:gap-4">
