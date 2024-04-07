@@ -93,7 +93,7 @@ const SearchAddress = () => {
                   <label
                     key={i}
                     htmlFor={e}
-                    className="text-[0.8rem] font-[400] flex items-center gap-2 text-[#484851]"
+                    className="text-[0.7rem] lg:text-[0.8rem] font-[400] flex items-center gap-2 text-[#484851]"
                   >
                     <input
                       id={e}

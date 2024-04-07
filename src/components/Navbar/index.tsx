@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav
       className={` ${
         !isHomePage ? "bg-[#F2F6FD]" : "bg-white"
-      }  fixed w-[100%] z-20 py-[1rem] px-[1.5rem] lg:px-[5rem]`}
+      }  fixed w-[100%] h-fit z-20 py-[1rem] px-[1.5rem] lg:px-[5rem]`}
     >
       <div className="flex justify-between items-center ">
         <div className="flex items-center font-clash">
