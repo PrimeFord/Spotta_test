@@ -52,12 +52,12 @@ const Navbar = () => {
 
       {!isHomePage && (
         <div>
-          <div className="pt-2 lg:hidden flex">
+          <div className="pt-4 lg:hidden flex">
             <SearchField />
           </div>
           <div>
             <div className="flex flex-col gap-2 lg:flex-row">
-              <div className="mb-2">
+              <div className="mb-2 mt-3">
                 <p className="text-[1rem] lg:text-[1.2rem] font-[500]">
                   {address || "Bonny and Clyde Street, Ajao Estate, Lagos."}
                 </p>
