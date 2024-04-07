@@ -20,7 +20,7 @@ const SearchAddress = () => {
     }
   };
   return (
-    <div className="mt-[20rem] pt-4 lg:mt-[11rem] pb-2 flex flex-col-reverse lg:flex-row gap-8 lg:gap-[4rem]">
+    <div className="pt-[22rem] lg:pt-[11rem] pb-2 flex flex-col-reverse lg:flex-row gap-8 lg:gap-[4rem]">
       <div className="w-[100%] lg:w-[70%] gap-2 flex flex-col">
         {reviews.map((el) => (
           <ReviewCard props={el} />
@@ -53,10 +53,13 @@ const SearchAddress = () => {
           <p className="text-[1rem] lg:text-[1.2rem] font-[400] text-center mb-2">
             Review Location
           </p>
-          <p className="text-[1rem] lg:text-[1.2rem] font-[500]">
+          <p className="text-[1rem] mb-2 lg:text-[1.2rem] font-[500]">
             {address || "Bonny and Clyde Street, Ajao Estate, Lagos."}
           </p>
-          <form action="" onSubmit={() => {}}>
+          <form
+            action=""
+            //  onSubmit={() => {}}
+          >
             <label htmlFor="amenities" className="relative">
               <div className="w-[100%] h-[2.8rem] rounded-[8px] flex flex-row-reverse items-center bg-[#F3F7FE] border-[1px] border-solid border-[#D4DCF1] px-3">
                 <span className="pr-3">
@@ -87,7 +90,7 @@ const SearchAddress = () => {
               <div
                 className={` ${
                   hide ? "grid" : "hidden"
-                } h-[15rem] lg:h-[10rem] w-full lg:w-[100%] absolute bg-[#F3F7FE] p-1 grid-cols-3 lg:grid-cols-5 border-[1px] border-solid border-[#D4DCF1] rounded-[8px]`}
+                } h-[15rem] lg:h-[10rem] w-full lg:w-[100%] absolute bg-[#F3F7FE] p-1 grid grid-cols-3 lg:grid-cols-5 border-[1px] border-solid border-[#D4DCF1] rounded-[8px]`}
               >
                 {reviewTags.map((e, i) => (
                   <label
@@ -149,12 +152,16 @@ const SearchAddress = () => {
             <div className="flex gap-6 mt-4">
               <button
                 type="button"
-                disabled={input !== "" ? false : true}
-                className="bg-[#3366FF]  w-full text-[#fff] hover:bg-[#3366FF95] text-[0.9rem] rounded-[8px] p-2"
+                // disabled={input !== "" ? false : true}
+                disabled={true}
+                className="bg-[#3366FF] disabled w-full text-[#fff] hover:bg-[#3366FF95] text-[0.9rem] rounded-[8px] p-2"
               >
                 SUBMIT
               </button>
-              <button className="border-[#3366FF] w-full text-[#3366FF] hover:bg-[#5378F620] border-solid border-[1px] text-[0.9rem] p-2 rounded-[8px]">
+              <button
+                className="border-[#3366FF] w-[38rem] text-[#3366FF] hover:bg-[#5378F620] border-solid border-[1px] text-[0.9rem] p-2 rounded-[8px]"
+                onClick={() => setShow(false)}
+              >
                 CANCEL
               </button>
             </div>
