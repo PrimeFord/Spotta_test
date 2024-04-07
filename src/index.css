@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+@layer base {
+  @font-face {
+    font-family: "Clash";
+    src: url("../fonts/ClashDisplay-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: normal;
+    font-style: normal;
+  }
+}
