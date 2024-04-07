@@ -87,7 +87,7 @@ const SearchAddress = () => {
               <div
                 className={` ${
                   hide ? "grid" : "hidden"
-                } h-[10rem] w-[100%] absolute bg-[#F3F7FE] p-1 grid-cols-3 lg:grid-cols-5 border-[1px] border-solid border-[#D4DCF1] rounded-[8px]`}
+                } h-[15rem] lg:h-[10rem] w-[100%] absolute bg-[#F3F7FE] p-1 grid-cols-3 lg:grid-cols-5 border-[1px] border-solid border-[#D4DCF1] rounded-[8px]`}
               >
                 {reviewTags.map((e, i) => (
                   <label
